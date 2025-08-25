@@ -10,12 +10,14 @@ interface PositionCardProps {
   imageSrc: string
   link: string
   tags: string[]
+  className?: string;
 }
 
-export default function PositionCard({ title, description, imageSrc, link, tags }: PositionCardProps) {
+
+export default function PositionCard({ title, description, imageSrc, link, tags, className = "" }: PositionCardProps) {
   return (
     <Card
-      className="overflow-hidden flex flex-col h-full p-0 border-0 bg-white shadow-md transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:shadow-2xl hover:scale-[1.025] group rounded-2xl"
+      className={`overflow-hidden flex flex-col h-full p-0 border-0 bg-white shadow-md transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:shadow-2xl hover:scale-[1.025] group rounded-2xl ${className}`}
       style={{ willChange: 'transform, box-shadow' }}
     >
       <div className="relative w-full aspect-square overflow-hidden bg-gradient-to-br from-jordy-blue/10 to-cornflower-blue/10">

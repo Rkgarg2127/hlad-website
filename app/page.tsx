@@ -7,6 +7,7 @@ import HeroSection from "./hero-section"
 import Footer from "@/components/footer"
 import About from "./about"
 import PostHolder from './postHolder'
+import MainEvent from "./mainEvents"
 
 export default function Home() {
   // Add scroll offset for fixed header
@@ -44,11 +45,12 @@ export default function Home() {
     }
   }, [])
   return (
-    <div className="bg-gray-600 font-sans flex flex-col min-h-screen">
+    <div className="font-sans flex flex-col min-h-screen">
         <Header />
         <HeroSection />
         <About />
-        <PostHolder />
+        <MainEvent />
+        {/* <PostHolder /> */}
         <Footer />
     </div>
   );
